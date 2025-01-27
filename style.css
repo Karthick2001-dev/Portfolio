@@ -359,7 +359,7 @@ section {
     border-radius: 8px;
     flex: 3; /* Ensures the text section is wider */
     text-align: justify;
-    margin-top: -10px;
+    margin-top: -02px;
     margin-bottom: 1em; /* Adds one line of space between paragraphs inside the .text-container */
 
   }
@@ -515,6 +515,15 @@ article {
     font-size: 0.5 rem;  /* Adjust this value */
     line-height: 1.5;   /* Improve readability */
   }
+   .icon.arrow {
+    height: auto;
+    position: relative;
+    right: -100%; /* Adjust to suit the layout */
+    bottom: 5%; /* Relative to screen size */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
 
 
 /* CONTACT */
@@ -622,12 +631,38 @@ footer p {
   }
 
   #Certifications .icon.arrow {
-    height: auto; /* Maintain aspect ratio */
-    position: relative;  /* Position relative to #Certifications section */
-    right: -60rem;  /* Adjust distance from the right side */
-    bottom: 5rem; /* Adjust distance from the bottom */
-    cursor: pointer; /* Make it clickable */
-    transition: transform 0.3s ease; /* Smooth effect on hover */
+    height: auto;
+    position: relative;
+    right: -100%; /* Adjust to suit the layout */
+    bottom: 5%; /* Relative to screen size */
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 
+@media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .section-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    article {
+      width: 100%;
+    }
+  
+    .certifications-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
